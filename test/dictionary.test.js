@@ -8,6 +8,9 @@ const message = require('../src/utils/messages');
 
 
 describe('Add Key to dictionary', function () {
+    beforeEach(() => {
+        sinon.restore();
+    })
     afterEach( () => {
         sinon.restore();
     })
@@ -30,28 +33,7 @@ describe('Add Key to dictionary', function () {
         dictionaryService.addKey("foo", "bax");        
         dictionaryService.addKey("foo", "bar");        
         expect(consoleLogSpy).to.have.been.calledWith(message.ADD_MESSAGE);
-    })
-
-})
-
-describe('Items in dictionary', function () {
-    afterEach( () => {
         sinon.restore();
     })
 
-    it("should list an empty item from dictionary", () => {
-        let consoleLogSpy = sinon.spy(console, "log");
-        dictionaryService.items("foo", "bar");        
-        expect(consoleLogSpy).to.have.been.calledWith(message.EMPTY_SET_MESSAGE);
-    })
-
-    // it("should list item from dictionary", () => {
-    //     dictionaryService.items();
-    //     let consoleLogSpy = sinon.spy(console, "log");       
-    //     expect(consoleLogSpy).to.have.been.calledWith("{foo : bar}");
-    // })
-
 })
-
-
-

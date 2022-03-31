@@ -72,7 +72,7 @@ async function run() {
         break;
       }
 
-      case constants._COUNT_COMMAND: {
+      case constants.MEMBERS_COUNT_COMMAND: {
         dictionaryService.membersCount();
         break;
       }
