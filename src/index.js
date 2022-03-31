@@ -4,8 +4,6 @@ const message = require('./utils/messages');
 const info = require('./utils/info');
 const dictionaryService = require('./services/dictionary_service');
 
-// let dictionary = {};
-
 console.log(`${info.INFORMATION}`);
 
 async function run() {
