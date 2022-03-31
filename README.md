@@ -1,6 +1,6 @@
 # App Overview
 
-A basic console app built with Javascript
+Multi-value Dictionary console app built with Javascript
 
 # Setup
 
